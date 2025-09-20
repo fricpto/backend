@@ -3,12 +3,18 @@ const express = require('express')
 const { read } = require('fs')
 const app = express()
 const cors = require('cors')
-
+app.use(express.static('build'))
 app.use(cors())
 // const app = http.createServer((request, response) => {
 //     response.writeHead(200, { 'Content-Type': 'application/json' })
 //     response.end(JSON.stringify(notes))
 // })
+const path = require('path')
+app.use(express.static(path.join(__dirname, 'dist')))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'))
+})
 
 app.use(express.json())
 
