@@ -9,12 +9,6 @@ app.use(cors())
 //     response.writeHead(200, { 'Content-Type': 'application/json' })
 //     response.end(JSON.stringify(notes))
 // })
-const path = require('path')
-app.use(express.static(path.join(__dirname, 'dist')))
-
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'))
-})
 
 app.use(express.json())
 
