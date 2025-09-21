@@ -2,9 +2,9 @@
 const express = require('express')
 // const { read } = require('fs')
 const app = express()
-const cors = require('cors')
+// const cors = require('cors')
 app.use(express.static('dist'))
-app.use(cors())
+// app.use(cors())
 // const app = http.createServer((request, response) => {
 //     response.writeHead(200, { 'Content-Type': 'application/json' })
 //     response.end(JSON.stringify(notes))
