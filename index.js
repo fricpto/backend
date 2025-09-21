@@ -1,9 +1,9 @@
-const http = require('http')
+// const http = require('http')
 const express = require('express')
-const { read } = require('fs')
+// const { read } = require('fs')
 const app = express()
 const cors = require('cors')
-app.use(express.static('build'))
+app.use(express.static('dist'))
 app.use(cors())
 // const app = http.createServer((request, response) => {
 //     response.writeHead(200, { 'Content-Type': 'application/json' })
